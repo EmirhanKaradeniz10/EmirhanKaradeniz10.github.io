@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>VK Metal – Metal Polisaj, Krom ve Bileme | Muğla / Marmaris</title>
+  <meta name="description" content="VK Metal, Muğla Marmaris'te metal polisaj, krom kaplama ve profesyonel bileme hizmetleri sunan yerel bir atölyedir. Volkan Karadeniz tarafından yürütülmektedir." />
+  <meta name="keywords" content="metal polisaj muğla, bileme marmaris, krom kaplama, bıçak bileme, metal parlatma, VK Metal" />
+  <meta name="author" content="Volkan Karadeniz" />
+  <link rel="canonical" href="https://EmirhanKaradeniz10.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="VK Metal – Metal Polisaj & Bileme | Muğla" />
+  <meta property="og:description" content="Muğla'da metal polisaj, krom ve bileme hizmetleri. Yerel, güvenilir, usta işi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://EmirhanKaradeniz10.github.io/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:   #0d0d0d;
+      --steel:   #1a1a1a;
+      --iron:    #2c2c2c;
+      --chrome:  #c8c8c8;
+      --silver:  #e8e8e8;
+      --accent:  #d4a843;
+      --white:   #f5f5f2;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--silver);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(13,13,13,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(200,200,200,0.08);
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 3px;
+      color: var(--white);
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--chrome);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 0 2.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(212,168,67,0.07) 0%, transparent 60%),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 60px,
+          rgba(255,255,255,0.015) 60px,
+          rgba(255,255,255,0.015) 61px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 60px,
+          rgba(255,255,255,0.015) 60px,
+          rgba(255,255,255,0.015) 61px
+        ),
+        var(--black);
+    }
+    /* animated metallic sheen */
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(212,168,67,0.04) 50%, transparent 100%);
+      animation: sheen 6s ease-in-out infinite alternate;
+    }
+    @keyframes sheen {
+      from { transform: translateX(-30%); }
+      to   { transform: translateX(30%); }
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      position: relative;
+      opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 14vw, 13rem);
+      line-height: 0.9;
+      letter-spacing: 2px;
+      color: var(--white);
+      position: relative;
+      opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+    }
+    .hero-title em {
+      font-style: normal;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--chrome);
+    }
+    .hero-sub {
+      margin-top: 1.8rem;
+      max-width: 480px;
+      font-size: 1rem;
+      color: var(--chrome);
+      font-style: italic;
+      line-height: 1.6;
+      position: relative;
+      opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+    }
+    .hero-cta {
+      margin-top: 2.5rem;
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      background: var(--accent);
+      color: var(--black);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+      opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .hero-cta:hover { background: var(--silver); transform: translateY(-2px); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 2.5rem; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── HAKKIMIZDA ── */
+    #hakkimizda { background: var(--steel); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-text p { margin-bottom: 1.2rem; color: var(--chrome); }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .stat-box {
+      border: 1px solid rgba(200,200,200,0.12);
+      padding: 1.8rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-box::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--accent);
+    }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--chrome); margin-top: 0.4rem; }
+
+    /* ── HİZMETLER ── */
+    #hizmetler { background: var(--black); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(200,200,200,0.08);
+      border: 1px solid rgba(200,200,200,0.08);
+    }
+    .service-card {
+      background: var(--black);
+      padding: 2.8rem 2rem;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card:hover { background: var(--iron); }
+    .service-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .service-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+    .service-desc { font-size: 0.9rem; color: var(--chrome); line-height: 1.7; }
+    .service-list {
+      margin-top: 1rem;
+      padding-left: 0;
+      list-style: none;
+    }
+    .service-list li {
+      font-size: 0.85rem;
+      color: var(--chrome);
+      padding: 0.3rem 0;
+      border-bottom: 1px solid rgba(200,200,200,0.07);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .service-list li::before { content: '—'; color: var(--accent); font-size: 0.7rem; }
+
+    /* ── NEDEN ── */
+    #neden { background: var(--steel); }
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .reason-item {
+      display: flex; gap: 1.2rem; align-items: flex-start;
+      padding: 1.5rem;
+      border: 1px solid rgba(200,200,200,0.07);
+      transition: border-color 0.3s;
+    }
+    .reason-item:hover { border-color: var(--accent); }
+    .reason-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: rgba(212,168,67,0.2);
+      line-height: 1;
+      min-width: 50px;
+    }
+    .reason-title { font-weight: 600; color: var(--white); margin-bottom: 0.3rem; font-size: 0.95rem; }
+    .reason-desc { font-size: 0.87rem; color: var(--chrome); }
+
+    /* ── İLETİŞİM ── */
+    #iletisim { background: var(--black); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .contact-icon {
+      width: 42px; height: 42px;
+      border: 1px solid rgba(212,168,67,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+    .contact-detail { font-size: 0.9rem; color: var(--chrome); }
+    .contact-detail a { color: var(--chrome); text-decoration: none; transition: color 0.2s; }
+    .contact-detail a:hover { color: var(--accent); }
+    .contact-detail strong { display: block; font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; font-weight: 400; }
+
+    .contact-note {
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 1.8rem;
+      background: rgba(212,168,67,0.04);
+      font-style: italic;
+      color: var(--chrome);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--steel);
+      border-top: 1px solid rgba(200,200,200,0.07);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      color: var(--chrome);
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-copy { font-size: 0.75rem; color: rgba(200,200,200,0.35); letter-spacing: 1px; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,168,67,0.3), transparent);
+      margin: 0;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.72rem; }
+      .hero { padding: 0 1.2rem 3.5rem; }
+      section { padding: 4rem 1.2rem; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .reasons-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">VK <span>Metal</span></div>
+    <ul class="nav-links">
+      <li><a href="#hakkimizda">Hakkımızda</a></li>
+      <li><a href="#hizmetler">Hizmetler</a></li>
+      <li><a href="#neden">Neden VK?</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <p class="hero-eyebrow">Muğla / Marmaris — Atölye Hizmetleri</p>
+    <h1 class="hero-title">VK<br><em>Metal</em></h1>
+    <p class="hero-sub">Metal polisaj, krom kaplama ve profesyonel bileme işleri. Yıpranmış, matlaşmış, körleşmiş — hepsini yeniden hayata döndürüyoruz.</p>
+    <a href="#hizmetler" class="hero-cta">Hizmetleri Gör</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- HAKKIMIZDA -->
+  <section id="hakkimizda">
+    <div class="section-inner">
+      <p class="section-label">Biz Kimiz</p>
+      <h2 class="section-title">Hakkımızda</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>VK Metal, Volkan Karadeniz tarafından kurulmuş, metal polisaj, krom kaplama ve bileme işleri üzerine çalışan yerel bir atölyedir.</p>
+          <p>Muğla'da faaliyet gösteren atölyemizde, hem bireysel hem de küçük işletmelere yönelik hizmet veriyoruz.</p>
+          <p>Büyük bir firma değil; işini titizlikle yapan yerel bir atölyeyiz. Her ürün, türü ne olursa olsun özenle işlenir. İster mutfak eşyası olsun ister farklı metal parçalar, hepsine aynı dikkat gösterilir.</p>
+          <p>Amacımız; yıpranmış, matlaşmış veya körelmiş metal ürünleri yeniden kullanıma hazır, temiz ve dayanıklı hale getirmektir.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Temel Hizmet</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">%100</div>
+            <div class="stat-label">El İşçiliği</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">Yerel</div>
+            <div class="stat-label">Muğla / Marmaris</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">Birebir</div>
+            <div class="stat-label">Usta İletişimi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- HİZMETLER -->
+  <section id="hizmetler">
+    <div class="section-inner">
+      <p class="section-label">Ne Yapıyoruz</p>
+      <h2 class="section-title">Hizmetlerimiz</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">✦</span>
+          <div class="service-name">Polisaj</div>
+          <p class="service-desc">Metal yüzeylerde oluşan çizik, matlık ve oksitlenmeleri gidererek parlak ve temiz bir görünüm kazandırılır.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">◈</span>
+          <div class="service-name">Krom İşlemleri</div>
+          <p class="service-desc">Metal yüzeyin daha dayanıklı ve estetik hale gelmesini sağlar. Uzun ömürlü ve düzgün bir yüzey elde edilir.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⟋</span>
+          <div class="service-name">Bileme</div>
+          <p class="service-desc">Profesyonel bileme hizmetiyle keskinlik ve düzgünlük ön planda tutulur.</p>
+          <ul class="service-list">
+            <li>Bıçak</li>
+            <li>Çatal</li>
+            <li>Kaşık</li>
+            <li>Mutfak ekipmanları</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- NEDEN VK -->
+  <section id="neden">
+    <div class="section-inner">
+      <p class="section-label">Fark Yaratan</p>
+      <h2 class="section-title">Neden VK Metal?</h2>
+      <div class="reasons-grid">
+        <div class="reason-item">
+          <div class="reason-num">01</div>
+          <div>
+            <div class="reason-title">Yerel ve Güvenilir</div>
+            <div class="reason-desc">Muğla'da köklü, samimi ve doğrudan hizmet. Uzaktan değil, yüz yüze.</div>
+          </div>
+        </div>
+        <div class="reason-item">
+          <div class="reason-num">02</div>
+          <div>
+            <div class="reason-title">Ustasıyla Birebir İletişim</div>
+            <div class="reason-desc">İşinizi yapan kişiyle doğrudan konuşursunuz. Aracı yok, belirsizlik yok.</div>
+          </div>
+        </div>
+        <div class="reason-item">
+          <div class="reason-num">03</div>
+          <div>
+            <div class="reason-title">El İşçiliğine Dayalı Titizlik</div>
+            <div class="reason-desc">Her parça dikkatle ele alınır. Seri üretim değil, özenli atölye anlayışı.</div>
+          </div>
+        </div>
+        <div class="reason-item">
+          <div class="reason-num">04</div>
+          <div>
+            <div class="reason-title">Hızdan Çok Kalite</div>
+            <div class="reason-desc">Doğru yapılmış bir iş, hızlı yapılmış bir işten her zaman daha değerlidir.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- İLETİŞİM -->
+  <section id="iletisim">
+    <div class="section-inner">
+      <p class="section-label">Ulaşın</p>
+      <h2 class="section-title">İletişim</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">👤</div>
+            <div class="contact-detail">
+              <strong>Usta</strong>
+              Volkan Karadeniz
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <strong>Konum</strong>
+              Muğla / Marmaris
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <strong>Telefon</strong>
+              <a href="tel:+905324673171">+90 532 467 3171</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-detail">
+              <strong>E-posta</strong>
+              <a href="mailto:volkankaradeniz@gmail.com">volkankaradeniz@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-note">
+          "Yıpranmış, matlaşmış ya da körleşmiş bir ürününüz mü var? Beni arayın — gerekirse ne yapabileceğimizi birlikte konuşuruz."
+          <br><br>
+          <strong style="color: var(--accent); font-style: normal; font-size: 0.78rem; letter-spacing: 2px;">— Volkan Karadeniz</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">VK <span>Metal</span></div>
+    <div class="footer-copy">© 2025 VK Metal · Muğla / Marmaris · Tüm hakları saklıdır.</div>
+  </footer>
+
+</body>
+</html>
